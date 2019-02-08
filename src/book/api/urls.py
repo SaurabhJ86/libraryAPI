@@ -1,8 +1,7 @@
 from django.conf.urls import url
 
-from .views import BookList,BookRUDAPIView,CRUDLAPIView
-
+from .views import BookListAPIView,BookUpdateDeleteRetrieveAPIView
 urlpatterns = [
-	url(r'^$',BookList.as_view()),
-	url(r'^(?P<id>\d+)/$',BookRUDAPIView.as_view()),
+	url(r'^$',BookListAPIView.as_view()),
+	url(r'^(?P<id>\d+)/$',BookUpdateDeleteRetrieveAPIView.as_view()),
 ]
